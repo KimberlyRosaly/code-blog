@@ -1,12 +1,20 @@
-
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 import './App.css';
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+import Header from './components/Header'
+import Intro from './containers/Intro'
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 
 function App() {
-  return (
-    <div className="App">
-      B L A N K APP
-    </div>
-  );
+  return (<>
+
+    <Header />
+    <Intro />
+
+  </>);
 }
 
 export default App;
