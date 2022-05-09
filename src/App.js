@@ -3,7 +3,7 @@ import './App.css';
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-import Header from './components/Header'
+// import Header from './components/Header'
 import Intro from './containers/Intro'
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -11,7 +11,7 @@ import Intro from './containers/Intro'
 function App() {
   return (<>
 
-    <Header />
+    {/* <Header /> */}
     <Intro />
 
   </>);
