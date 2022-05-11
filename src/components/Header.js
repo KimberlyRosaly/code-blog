@@ -1,18 +1,44 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center'
+  },
+}));
 
-function Example() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0)
+export default function Header() {
+  const classes = useStyles();
 
   return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+    <div className={classes.root}>
+      <Grid container justifyContent='center' alignItems='center' spacing={1}>
+        <Grid 
+          item 
+          xs={5}>
+          <Paper className={classes.paper}>
+            <img 
+            style={{maxWidth:"200px"}}
+            src={`${'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Pencil_BLACK-01.svg/1200px-Pencil_BLACK-01.svg.png'}`} />
+          </Paper>
+        </Grid>
+        <Grid item xs>
+          <Paper className={classes.paper}>
+          code.blog
+          </Paper>
+        </Grid>
+        <Grid item xs>
+          <Paper className={classes.paper}>
+          by kimberly rosaly
+          </Paper>
+        </Grid>
+      </Grid>
     </div>
   );
 }
-
-export default Example
