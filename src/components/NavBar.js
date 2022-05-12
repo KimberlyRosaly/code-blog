@@ -13,7 +13,7 @@ import Tab from '@material-ui/core/Tab';
   export default function NavBar() {
  
     return (
-        <Tabs>
+        <Tabs centered>
               <Tab label="ABOUT ME" />
               <Tab label="BLOG" />
         </Tabs>

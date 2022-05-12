@@ -1,18 +1,20 @@
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-import './App.css';
+import React from 'react'
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// import Header from './components/Header'
-import Intro from './containers/Intro'
+import NavBar from './components/NavBar'
+import Header from './components/Header'
+import Blog from './containers/Blog';
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
 function App() {
   return (<>
 
-    {/* <Header /> */}
-    <Intro />
+    <NavBar />
+    <Header />
+    <Blog />
 
   </>);
 }

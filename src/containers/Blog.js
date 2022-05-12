@@ -1,10 +1,11 @@
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-import * as React from 'react'
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-MATERIAL UI IMPORTS
-import Grid from '@material-ui/core/Grid'
-import { Typography } from '@material-ui/core'
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-JSON DATA OBJECTS
+import React from 'react'
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+import { useState } from 'react'
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 import Menu from '../components/Menu'
+import Post from '../components/Post'
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-JSON DATA OBJECTS
 import blogsData from '../assets/data/blogsData'
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -12,8 +13,11 @@ import blogsData from '../assets/data/blogsData'
 
 export default function Blog() {
 
+  const [blogSelected, setBlogSelected] = useState(false)
+
   return (<>
-    <Menu />
+    <Menu blogs={blogsData} />
+    <Post blog={blogSelected} />
   </>)
 
 }
