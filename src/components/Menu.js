@@ -1,6 +1,6 @@
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 import React from 'react'
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-MATERIAL UI IMPORTS
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-M A T E R I A L  U I  IMPORTS
 import { makeStyles } from '@material-ui/core'
 import { Grid } from '@material-ui/core'
 import { Paper } from '@material-ui/core'
