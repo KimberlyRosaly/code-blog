@@ -1,6 +1,7 @@
 import React from 'react'
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-MATERIAL UI IMPORTS
-import { Grid, Typography, makeStyles, Paper} from '@material-ui/core'
+import { ButtonGroup, Button, Grid, Typography, makeStyles, Paper} from '@material-ui/core'
+
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
@@ -39,6 +40,7 @@ export default function About() {
 
                     <Grid item xs={5}>
                     <img 
+                    alt='self portrait'
                     style={{maxWidth:"200px", borderRadius:"100%"}}
                     src={`${'https://www.dropbox.com/s/q715ljny8yv5zl7/File_000.jpeg?raw=1'}`} />
                     </Grid>
@@ -48,7 +50,15 @@ export default function About() {
                     <Typography variant='h6'>Kimberly Rosaly</Typography>
                     <Typography variant='h6'>Software Engineer</Typography>
                     <Typography variant='h6'>Bay Shore, New York</Typography>
+
+
+                                <ButtonGroup variant="contained" aria-label="outlined primary button group">
+                                <Button>LinkedIn</Button>
+                                <Button>GitHub</Button>
+                                </ButtonGroup>
                     </Paper>
+                    
+                    
                     </Grid>
 
                 </Grid>
