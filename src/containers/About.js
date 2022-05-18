@@ -8,15 +8,16 @@ import { ButtonGroup, Button, Grid, Typography, makeStyles, Paper} from '@materi
 // C U S T O M    S T Y L E  ATTRIBUTES
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 const useStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1,
-    },
+    
     paperRoot: {
+        display: 'flex',
+        justifyContent: 'center',
         padding: '15px',
         marginTop: '50px',
         marginBottom: '50px',
         marginLeft: '100px',
         marginRight: '100px',
+        
 
     }
 }))
@@ -29,39 +30,38 @@ export default function About() {
 
     return (<>
                 
-                <Paper className={classes.paperRoot}>
                     
                 
 
                 <Grid container
                 justifyContent='center'
                 alignItems='center'
-                spacing={1}>
+                spacing={0}>
 
-                    <Grid item xs={5}>
-                    <img 
-                    alt='self portrait'
-                    style={{maxWidth:"200px", borderRadius:"100%"}}
-                    src={`${'https://www.dropbox.com/s/q715ljny8yv5zl7/File_000.jpeg?raw=1'}`} />
+                <Paper className={classes.paperRoot} elevation={15}>
+
+                    <Grid item xs>
+                        <img 
+                        alt='self portrait'
+                        style={{maxWidth:"200px", borderRadius:"5%"}}
+                        src={`${'https://www.dropbox.com/s/q715ljny8yv5zl7/File_000.jpeg?raw=1'}`} />
                     </Grid>
 
                     <Grid item xs>
-                    <Paper className={classes.paper}>
-                    <Typography variant='h6'>Kimberly Rosaly</Typography>
-                    <Typography variant='h6'>Software Engineer</Typography>
-                    <Typography variant='h6'>Bay Shore, New York</Typography>
+                    <Paper>
+                                <Typography variant='h5'>Kimberly Rosaly</Typography>
+                                <Typography variant='h6'>Software Engineer</Typography>
+                                <Typography variant='h6'>Bay Shore, New York</Typography>
 
 
                                 <ButtonGroup variant="contained" aria-label="outlined primary button group">
-                                <Button>LinkedIn</Button>
-                                <Button>GitHub</Button>
+                                <Button variant="outlined" href='https://www.linkedin.com/in/kimberly-rosaly/ '>LinkedIn</Button>
+                                <Button variant="outlined" href='https://github.com/KimberlyRosaly/'>GitHub</Button>
                                 </ButtonGroup>
-                    </Paper>
-                    
-                    
+                    </Paper>                  
                     </Grid>
 
-                </Grid>
                 </Paper>
+                </Grid>
     </>)
 }
