@@ -19,7 +19,7 @@ export default function Blog() {
 
   const handleClick = (event, blogID) => {
     // console.log("the child has been clicked | this log lives in it's clickHandling parent", blogID)
-    const selectedBlog = blogsData.find((eachBlog) => eachBlog.id == blogID )  
+    const selectedBlog = blogsData.find((eachBlog) => eachBlog.id === blogID )  
     // state.blogSelected = {...}
     setBlogSelected(selectedBlog)
   }
