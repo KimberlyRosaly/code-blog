@@ -1,11 +1,12 @@
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 import React from 'react'
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
+import { Routes, Route } from 'react-router-dom'
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 import NavBar from './components/NavBar'
 import Header from './components/Header'
-import Blog from './containers/Blog';
+import Blog from './containers/Blog'
+import About from './containers/About'
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
@@ -14,7 +15,14 @@ function App() {
 
     <NavBar />
     <Header />
-    <Blog />
+
+    <Routes>
+      
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/about" element={<About />} />
+      
+    </Routes>   
+    
 
   </>);
 }
