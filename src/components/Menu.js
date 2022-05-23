@@ -1,5 +1,7 @@
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 import React from 'react'
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+import { Link } from 'react-router-dom'
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-M A T E R I A L  U I  IMPORTS
 import { makeStyles } from '@material-ui/core'
 import { Grid } from '@material-ui/core'
@@ -32,17 +34,20 @@ export default function Menu(props) {
         {blogsData.map((b) => 
 
         // THE GRID CHILD CARRIES A REQUIRED KEY - EASILY PASS THAT ID INTO EVENTHANDLING > WRITTEN IN PARENT, FUNCTION ACCESSIBLE VIA PROPS
-            <Grid item xs="auto" key={b.id}  onClick={(event) => props.handleClick(event, b.id)}>
+            <Grid item xs="auto" key={b.id}>
+
+                {/* CLICKING ON ELEMENT WILL CHANGE  U R L   P A R A M S  TO CONTAIN ID OF BLOG */}
+                <Link to={`/blog/${b.id}`} style={{ textDecoration: 'none' }}>
                 <Paper 
                     classes={{root: classes.paperRoot}} 
                     elevation={4}
                     style={{backgroundImage: `url(${b.image})`}} 
                     >
                         <CardHeader title={b.title} />                                     
-                        <Typography align='right' variant='subtitle2'>
-                            {b.date}
-                        </Typography>
+                        <Typography align='right' variant='subtitle2'>{b.date}</Typography>
                 </Paper>
+                </Link>
+
             </Grid>
         )}  
       </Grid>
