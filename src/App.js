@@ -8,29 +8,34 @@ import Header from './components/Header'
 import Blog from './containers/Blog'
 import About from './containers/About'
 import Post from './components/Post'
+import Guide from './components/Guide'
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 // GET BLOGID PARAM FROM THE URL
 
-function App() {
+export default function App() {
   
   return (<>
-
+    {/* > > > > > > > > > > > > > > > > > > > > > > > > > > > >  */}
     <NavBar />
     <Header />
+    <Guide />
+    {/* > > > > > > > > > > > > > > > > > > > > > > > > > > > >  */}
 
-    <Routes>
-      
-      <Route path="/blog" element={<Blog />} >
-        <Route path=":blogId" element={<Post />} />
-      </Route>
+    {/*  ==================================================================== */}
+    {/*                                             CLIENT SIDE R O U T I N G */}
+    <Routes>      
+        {/* =============================================site.com/ b l o g /  */}
+        <Route path="/blog" element={<Blog />} >
+        {/* =======================================site.com/ b l o g / 1 2 3  */}
+          <Route path=":blogId" element={<Post />} />
+        </Route>
 
-      <Route path="/about" element={<About />} />
-      
+        {/* =============================================site.com/ a b o u t  */}
+        <Route path="/about" element={<About />} />      
     </Routes>   
+    {/*  ==================================================================== */}    
     
 
   </>);
 }
-
-export default App;
