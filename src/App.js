@@ -9,6 +9,7 @@ import Blog from './containers/Blog'
 import About from './containers/About'
 import Post from './components/Post'
 import Guide from './components/Guide'
+import Home from './containers/Home'
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 // GET BLOGID PARAM FROM THE URL
@@ -25,6 +26,7 @@ export default function App() {
     {/*  ==================================================================== */}
     {/*                                             CLIENT SIDE R O U T I N G */}
     <Routes>      
+        <Route path="/" element={<Home />} />
         {/* =============================================site.com/ b l o g /  */}
         <Route path="/blog" element={<Blog />} >
         {/* =======================================site.com/ b l o g / 1 2 3  */}
