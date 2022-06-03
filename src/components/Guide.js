@@ -1,49 +1,53 @@
 import React from 'react'
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 import { useState } from 'react'
+import { useEffect } from 'react'
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+import { useParams } from 'react-router-dom'
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 import { Paper, Typography } from '@material-ui/core'
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-// DESCRIBE TO USER WHERE THEY ARE & WHAT THEY CAN DO
+// DESCRIBE TO USER  W H E R E  THEY ARE &  W H A T  THEY CAN DO
 export default function Guide() {
 
     // ==================================================
     //          MAKE A SAFE SPACE FOR  S T A T E  TO LIVE
     // PROPERTY KEY, FUNCTION TO CHANGE KEY'S VALUE = DEFAULT VALUE
-    const [value, setValue] = useState(true)
+    const [value, setValue] = useState(false)
+    // ==================================================
+    // GRAB SOME URL PARAMS TO USE LATER - ADVANCED DESTRUCTURING
+    const { blogId } = useParams();
+    // ==================================================
+    // PRETEND THIS WILL SHOW ME SOMETHING SOMEWHERE
+    useEffect(() => {
+        console.log("Hey, buddy. Nice to see you.")
+        console.log(blogId)
+        
+    })
     // ==================================================
 
-
-    // ==================================================
-
-    // T O   D O 
-    // CONDITIONAL RENDERING 
-    //         : BASED ON URL
-    //           GRAB CONTENTS OF URL
-    // IF URL HAS BLOG:ID > BLOGPOST GUIDE
-    // IF URL HAS ABOUT > ABOUTME GUIDE
-
-
-    function whereTest2() {
-        return (
-            <Paper>
-            <Typography align='center'>CHECK OUT ALL ABOUT ME, ONE DAY</Typography>
+// ------------------------------------------------------------RENDER CASES
+const whereTest = () => {
+    return (
+        <Paper>
+            <Typography align='center'>hi there - guide here! ლ(´ڡ`ლ)<br />TRUE CASE</Typography>
             </Paper>
         )
     }
-    function whereTest() {
+    const whereTest2 = () => {
         return (
             <Paper>
-            <Typography align='center'>hi there - guide here!</Typography>
+            <Typography align='center'>｡◕‿‿◕｡CHECK OUT ALL ABOUT ME, ONE DAY<br />FALSE CASE</Typography>
             </Paper>
         )
     }
+    // ------------------------------------------------------------
 
-
+    console.log(blogId)
     return (
         <>
-          { value ? whereTest() : whereTest2 }
+          { !!blogId ? whereTest() : whereTest2() }
         </>
     )
         
